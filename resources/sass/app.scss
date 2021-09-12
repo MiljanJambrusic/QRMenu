@@ -1,0 +1,283 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+.body-content {
+    max-height: 300px !important;
+    overflow-y: scroll;
+}
+
+.trix-button-group--history-tools {
+    display: none !important;
+}
+
+.error {
+    color: red;
+}
+
+.eyeActive {
+    color: #3d3d3d !important;
+}
+
+.eyeDef {
+    color: #bfbfbf;
+}
+
+.font-welcome {
+    font-size: 40px;
+    color: #FFF;
+    -webkit-text-stroke: 1px black;
+}
+
+.ico {
+    color: #f5ea62;
+    font-size: 26px;
+}
+
+.menu-bg {
+    img {
+        background: #FFF;
+    }
+}
+
+.welcome-text {
+    margin-top: 20vh;
+    text-align: center;
+    color: #e2e2de;
+    font-size: 26px;
+
+    span {
+        display: block;
+    }
+
+    .btn-prim {
+        border: 2px solid #f5ea62;
+        background: #3f423d;
+        color: #f5ea62;
+        font-weight: 500;
+        margin-top: 20px;
+        padding: 10px;
+
+        &:focus {
+            box-shadow: none;
+            color: #f5ea62;
+        }
+    }
+}
+
+.icon-back {
+    position: absolute;
+    margin-left: 20px;
+    font-size: 28px;
+}
+
+hr.hrcust {
+    border: 1px solid #f5ea62;
+}
+
+.del-btn {
+    border-radius: 50px;
+    font-size:16px;
+}
+
+.span-info-2 {
+    display: block;
+    margin-left: 10px;
+    color: #fff;
+    text-align: left;
+
+    span {
+        font-size: 16px;
+        font-weight: 500;
+    }
+}
+
+.span-info {
+    display: block;
+    margin-left: 10px;
+    color: #fff;
+    text-align: center;
+
+    span {
+        font-size: 18px;
+        font-weight: 500;
+    }
+}
+
+.common-item-article {
+    display: block;
+    border: 2px solid #f5ea62;
+    border-radius: 10px;
+    margin: auto;
+    margin-top: 14px;
+    width: 12rem;
+    background: #fff;
+
+    .image-wrapper {
+        padding: 10px;
+        width: 90%;
+        margin: auto;
+    }
+
+    .common-item-text-header {
+        margin-top: 10px;
+
+        span {
+            color: #3f423d;
+            font-size: 18px;
+            font-weight: 600;
+        }
+    }
+}
+
+.article-info {
+    span {
+        color: #fff;
+    }
+
+    .active-price {
+        font-weight: 600;
+    }
+
+    del {
+        color: #d62c20;
+        font-size: 13px;
+    }
+
+    .btn-prim {
+        border: 1px solid #f5ea62 !important;
+        background: #3f423d;
+        color: #f5ea62 !important;
+        font-size: 12px;
+
+        &:focus {
+            box-shadow: none;
+            color: #f5ea62;
+
+        }
+    }
+}
+
+
+.article-image-wrapper {
+    min-width: 160px;
+    width: 160px;
+    margin-left: 12px;
+
+    img {
+        border-radius: 14px;
+    }
+}
+
+.common-item {
+    display: block;
+    border: 2px solid #f5ea62;
+    border-radius: 10px;
+    margin: auto;
+    margin-top: 14px;
+    width: 9rem;
+    background: #fff;
+
+    a {
+        border: none;
+        text-decoration: none;
+    }
+
+    .image-wrapper {
+        width: 90%;
+        margin: auto;
+    }
+
+    .common-item-text-header {
+        margin-top: 10px;
+
+        span {
+            color: #3f423d;
+            font-size: 18px;
+            font-weight: 600;
+        }
+    }
+}
+
+.h1-naslov {
+    background: white;
+    padding: 6px 14px 7px;
+    border-bottom: 1px solid #81e34d;
+    border-top: 1px solid #81e34d;
+    border-radius: 14px;
+    font-size:24px;
+    font-weight: 500;
+}
+
+.navbg {
+    background: linear-gradient(#4f1544, #751d65);
+    height: 70px;
+}
+
+.modalShowMoreAboutArticle {
+    margin-top: 80px;
+}
+
+.regular-body {
+    margin-top: 80px;
+
+    .fa-reply {
+        color: #f5ea62;
+    }
+
+    .modal-for-xjet {
+        margin-top: 80px;
+    }
+}
+
+.tarea {
+
+}
+
+.body-bg {
+    background: linear-gradient(#4f1544, #751d65);
+    background-attachment: fixed;
+}
+
+.div-for-print{
+    padding: 20px;
+    border: 2px solid #751d65;
+    border-radius: 10px;
+    text-align: center;
+    margin: auto;
+    width: 480px;
+    #image-for-print{
+        width:  300px;
+        height: 300px;
+        margin:auto;
+    }
+    h2{
+        font-size: 36px;
+        font-weight: 600;
+        margin-bottom: 40px;
+        margin-top: 20px;
+    }
+}
+.detailing-order-articles{
+    .doa-number{
+        font-size: 22px;
+        font-weight: 600;
+        margin-right:10px;
+    }
+    .doa-name{
+        font-size:20px;
+        font-weight: 500;
+        margin-right:10px;
+    }
+    .doa-count{
+        font-size: 20px;
+        font-weight: 600;
+        margin-right:10px;
+    }
+}
+
+
+@import '~@fortawesome/fontawesome-free/scss/fontawesome';
+@import '~@fortawesome/fontawesome-free/scss/regular';
+@import '~@fortawesome/fontawesome-free/scss/solid';
+@import '~@fortawesome/fontawesome-free/scss/brands';
