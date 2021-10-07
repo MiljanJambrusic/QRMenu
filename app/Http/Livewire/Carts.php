@@ -50,18 +50,8 @@ class Carts extends Component
 
     public function makeOrder()
     {
-        /*$checkIfOrderExists = Order::select('id')->where('table_id', '=', $this->tableId)->get();
-        if (count($checkIfOrderExists) > 0) {
-            $this->modal_already_ordered = true;
-        } else {
-            return 'bbbb';*/
-        //Make order
-        //Treba mi total price
-        //People number
-        //Treba mi table id
         $objOrder = $this->createModelForOrder();
-        Order::create($objOrder);
-        $order_id = Order::select('id')->where('table_id', '=', $this->tableId)->get()[0]['id'];
+        $order_id = Order::create($objOrder)->id;
         $items_to_insert = $this->createModelFoodOrder($this->items_from_cart, $order_id, $this->tableId, $this->tableName);
         FoodOrder::insert($items_to_insert);
         $this->removeItemsFromCart($this->items_from_cart);
@@ -80,28 +70,44 @@ class Carts extends Component
 
     public function sortItems($items)
     {
-        //Group by sessions
         $this->current_total_price = 0;
         $itemsArray = array();
         $cnt = 0;
         $tmpSession = $items[0]->session;
         $itemsArray[$cnt] = array();
         $cnt++;
+        $flag = false;
         foreach ($items as $item) {
             if ($tmpSession != $item->session) {
                 $itemsArray[$cnt] = array();
                 $tmpSession = $item->session;
                 $cnt++;
+                if($item->session==$this->sessid){
+                    $flag = true;
+                }
             }
             $this->current_total_price += $item->cena;
         }
         $tmpSession = $items[0]->session;
         $this->cntOfPeople = $cnt;
-        $cnt = 0;
+        if($flag){
+            $cnt = 1;
+        }else{
+            $cnt = 0;
+        }
         foreach ($items as $item) {
             if ($this->sessid === $item->session) {
                 array_push($itemsArray[0], $item);
             } else {
+                if(count($itemsArray)>1 && $item->session != $this->sessid){
+                    if($cnt==0 && $tmpSession != $this->sessid){
+                        $cnt = 0;
+                    }else{
+                        $cnt = 1;
+                    }
+                }else{
+                    $cnt = 0;
+                }
                 if ($tmpSession != $item->session) {
                     $tmpSession = $item->session;
                     $cnt++;

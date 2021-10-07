@@ -7,7 +7,7 @@
     <div class="w-full flex justify-center flex-col">
         @foreach($listOfSubCategories as $subCat)
             <div class="common-item">
-                <a href="{{"categories/".$subCat->name }}?qrNum={{$qrNumFromUrl}}" class="p-2 flex flex-col">
+                <a href="{{$category."/".$subCat->name }}?qrNum={{$qrNumFromUrl}}" class="p-2 flex flex-col">
                     <div class="image-wrapper">
                         <img src="{{\App\Helper\Helper::URL_PATH. "/storage/images/sub_category/".$subCat->picture}}" class="w-full">
                     </div>

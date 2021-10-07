@@ -2,7 +2,7 @@
     {{-- If your happiness depends on money, you will never be happy with yourself. --}}
     <div class="flex items-center justify-end px-4 py-3 text-right sm:px-6">
         <input class="border-solid border border-gray-300 p-2 md:w-1/4 mr-4"
-               type="text" placeholder="Pretraga artikala po nazivu, kategorije ili podkategoriji" wire:model="term"/>
+               type="text" placeholder="Pretraga artikala po nazivu, kategorije ili potkategoriji" wire:model="term"/>
         <!--Da biste videli promenu slike osvežite stranicu:
         <x-jet-button class="mr-3 ml-3" style="background:#b02e80;" onclick="location.reload();">
             {{ __('Osveži') }}
@@ -27,7 +27,7 @@
                                 Kategorija
                             </th>
                             <th class="px-6 py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">
-                                Podkategorija
+                                Potkategorija
                             </th>
                             <th class="px-6 py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">
                                 Akcijska cena

@@ -8,7 +8,12 @@ $qrNum = @$_GET['qrNum'];
 
 if (!isset($qrNum))
     abort(403, 'Stranica nije pronađena ili QR kod nije aktivan.');
-
+else{
+    $checkQRNum = \Illuminate\Support\Facades\DB::table('tables')->where('qr_num','=',$qrNum)->get();
+    if(count($checkQRNum)==0){
+        abort(403,'Stranica nije pronađena ili QR kod nije validan');
+    }
+}
 ?>
     <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">

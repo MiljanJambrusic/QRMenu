@@ -1,6 +1,6 @@
 <div class="regular-body" wire:poll.10000ms="refreshDataTimeout">
     <a class="icon-back" href="javascript:history.back()"><i class="fas fa-reply"></i></a>
-    <h3 class="text-center" style="color:#fff;">Korpa "{{$this->tableName}}"</h3>
+    <h3 class="text-center" style="color:#fff;">Korpa {{$this->tableId}}</h3>
     <div class="mt-4">
         <span class="span-info-2">Ažurirano: <span> {{$this->now}}</span></span>
         <span class="span-info-2">Ukupna cena: <span> {{number_format($this->current_total_price,2)}} rsd</span></span>

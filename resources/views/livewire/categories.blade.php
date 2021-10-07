@@ -69,7 +69,7 @@
 
     <x-jet-dialog-modal wire:model="modalFormVisible">
         <x-slot name="title">
-            {{ __('Upravljanje stolovima') }}
+            {{ __('Upravljanje kategorijama') }}
         </x-slot>
 
         <x-slot name="content">
